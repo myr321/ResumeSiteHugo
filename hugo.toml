@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/myr321/ResumeSiteHugo'
+baseURL = 'https://github.com/myr321/ResumeSiteHugo/'
 languageCode = 'en-us'
 title = 'Youran Ma'
 theme = "PaperMod"
