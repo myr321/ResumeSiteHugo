@@ -1,0 +1,30 @@
+baseURL = 'https://myr321.github.io/'
+languageCode = 'en-us'
+title = 'Youran Ma'
+theme = "PaperMod"
+
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[params]
+  env = "production"
+  author = "Youran Ma"
+  ShowReadingTime = false
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  disableSpecial1stPost = true
