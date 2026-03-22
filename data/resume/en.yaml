@@ -1,0 +1,166 @@
+site:
+  name: Youran Ma
+  role: Software Engineer
+
+nav:
+  - label: Experience
+    anchor: experience
+  - label: Projects
+    anchor: projects
+  - label: Education
+    anchor: education
+  - label: Skills
+    anchor: skills
+
+labels:
+  contact: Contact
+  experience: Experience
+  projects: Selected Projects
+  education: Education
+  skills: Skills
+  honors: Honors
+  additional: Additional
+  coursework: Relevant Coursework
+  stack: Stack
+
+hero:
+  eyebrow: Backend Systems, Product Delivery, AI Applications
+  role: M.S. in Computer Science candidate at Northwestern University
+  summary: Computer science graduate student with internship experience across AI recruiting products, enterprise workflow tools, and performance-focused systems projects. I build reliable backend services and polished user-facing features with hands-on work in Java, Rails, Vue, Qt/C++, Python, SQL, and CUDA.
+  badges:
+    - MSCS @ Northwestern
+    - BEng CSE @ CUHK-Shenzhen
+    - Backend and Systems
+    - AI Product Engineering
+  actions:
+    - label: Download Resume
+      url: /resume/youran-ma-resume-en.pdf
+      style: primary
+    - label: Email
+      url: mailto:youranma2004@gmail.com
+      style: secondary
+    - label: GitHub
+      url: https://github.com/myr321
+      style: ghost
+  facts:
+    - label: Current
+      value: M.S. in Computer Science, Northwestern University
+    - label: Recent Role
+      value: Software Engineer Intern at Avary.ai
+    - label: Focus
+      value: Backend architecture, product workflows, and performance-oriented C/C++ systems
+
+contacts:
+  - label: Email
+    value: youranma2004@gmail.com
+    url: mailto:youranma2004@gmail.com
+  - label: LinkedIn
+    value: linkedin.com/in/youran-ma
+    url: https://www.linkedin.com/in/youran-ma
+  - label: GitHub
+    value: github.com/myr321
+    url: https://github.com/myr321
+
+experience:
+  - company: Avary.ai
+    role: Software Engineer Intern (Part-time)
+    period: Nov 2025 - Feb 2026
+    location: Remote, Seattle, WA
+    bullets:
+      - Built an AI interviewer product in an Agile team, translating customer requirements into sprint-ready tasks and coordinating PR reviews and merges to deliver backend and frontend features on schedule.
+      - Improved interview-flow reliability by adding recording duration and silence-detection checks in mock sessions, refining prompts and retry guidance to reduce invalid recordings caused by incorrect user actions.
+      - Implemented sentence segmentation for the speech system to deliver smoother, low-latency chunked TTS streaming.
+      - Engineered a scalable recruitment dashboard with a Vue 3 frontend and backend APIs for paginated lists, summary cards, and top-ranked views; added filtering and sticky headers to reduce full-data transfer and improve rendering performance.
+  - company: OSRAM Opto Semiconductors (China) Co., Ltd.
+    role: Software Engineer Intern
+    period: May 2024 - Aug 2024
+    location: Wuxi, Jiangsu, China
+    bullets:
+      - Migrated a legacy PHP-based workflow into a Qt/C++ PDA application supporting barcode scanning, material receiving, and inventory location transfers, improving usability for shop-floor operations.
+      - Modularized request and response handling by encapsulating Qt native JSON classes into reusable components, accelerating feature development and improving team productivity.
+      - Assisted in the Java and Spring Boot backend, adding business logic and database integration for frontend features.
+      - Worked with production teams to refine workflow details and supported testing, deployment, and release handoff in the company Alibaba Cloud environment.
+
+projects:
+  - name: TFT Smart Hub
+    role: Tech Lead
+    period: Sep 2025 - Dec 2025
+    context: Team project
+    stack: Vue 3, Vite, Rails, PostgreSQL, GitHub Actions, Heroku
+    links:
+      - label: Live Site
+        url: https://tft-smarthub-517534671b49.herokuapp.com
+      - label: GitHub
+        url: https://github.com/NU-CS-Software-Studio-Fall-25/project-tft-smart-hub
+    bullets:
+      - Worked in a Scrum team of four as Tech Lead, coordinating sprint planning, task breakdown, and integration between a Rails RESTful API backend and a Vue 3 plus Vite SPA.
+      - Designed the PostgreSQL data model and Rails MVC endpoints to power scalable team-composition discovery and browsing, adding indexed server-side filtering and pagination to prevent UI freezes as the dataset grew.
+      - Led the Vue 3 frontend, implementing composition search, editing, and recommendation features while improving accessibility with semantic markup, ARIA, and keyboard navigation.
+      - Contributed to CI/CD through GitHub Actions running RSpec and Cucumber, then deployed to Heroku with Postgres, Google OAuth authentication, and SMTP email delivery.
+  - name: CUDA-Accelerated Attention Forward Pass
+    role: Personal Project
+    period: Dec 2024 - Jan 2025
+    context: Performance engineering
+    stack: C++, CUDA, PyTorch C++ Extensions, Python
+    links:
+      - label: GitHub
+        url: https://github.com/myr321/GPU-accelerated-Attention
+    bullets:
+      - Implemented the forward pass of scaled dot-product attention using PyTorch C++ extensions and CUDA, building naive, tiled, and fused Softmax plus P@V kernels with validation and benchmarking scripts.
+      - Optimized the two major computation stages with shared-memory tiling and warp-level reduction, and fused Softmax plus P@V to avoid writing probability matrices back to global memory.
+      - Built correctness and performance evaluation pipelines in Python and benchmarked sequence lengths from 64 to 1024 with head dimensions from 32 to 256 on an RTX 2060 SUPER, achieving about 3x speedup over a PyTorch CPU baseline.
+
+education:
+  - school: Northwestern University
+    school_detail: McCormick School of Engineering
+    degree: Master of Science in Computer Science
+    period: Sep 2025 - Dec 2026
+    location: Evanston, Illinois, USA
+    note: GPA 3.9/4.0
+    highlights:
+      - Software Development Studio
+      - Cryptography
+      - CUDA Programming
+      - Scalable Software Architectures
+  - school: The Chinese University of Hong Kong, Shenzhen
+    school_detail: School of Data Science
+    degree: Bachelor of Engineering in Computer Science and Engineering
+    period: Sep 2021 - Jun 2025
+    location: Shenzhen, Guangdong, China
+    note: GPA 3.6/4.0
+    highlights:
+      - Dean's List
+      - Data Structures
+      - Design and Analysis of Algorithms
+      - Operating Systems
+      - Database Systems
+      - Parallel Computing
+
+skills:
+  - title: Languages
+    items:
+      - Java
+      - C
+      - C++
+      - Python
+      - SQL
+  - title: Frameworks
+    items:
+      - Spring Boot
+      - Rails
+      - Vue 3
+      - Qt (C++/QML, Widgets)
+  - title: Databases
+    items:
+      - MySQL
+      - SQLite
+      - PostgreSQL
+      - Query Optimization
+  - title: Tools
+    items:
+      - Git
+      - Linux
+      - Bash
+      - AWS (S3, Lambda, EC2, SQS)
+      - Qt Creator
+      - Visual Studio Code

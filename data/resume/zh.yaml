@@ -1,0 +1,163 @@
+site:
+  name: 马悠然
+  role: 软件工程 / 后端开发
+
+nav:
+  - label: 实习经历
+    anchor: experience
+  - label: 项目经历
+    anchor: projects
+  - label: 教育背景
+    anchor: education
+  - label: 专业技能
+    anchor: skills
+
+labels:
+  contact: 联系方式
+  experience: 实习经历
+  projects: 项目经历
+  education: 教育背景
+  skills: 专业技能
+  honors: 荣誉奖项
+  additional: 其他信息
+  coursework: 主修课程
+  stack: 技术栈
+
+hero:
+  eyebrow: 后端开发, 系统实现, AI 应用工程
+  role: Northwestern University 计算机科学硕士在读
+  summary: 具备 AI 招聘产品、企业内部系统与高性能计算项目经历，关注后端服务、系统实现与产品落地，能够在前后端协作中推进功能交付、性能优化与上线准备。
+  badges:
+    - Northwestern University 硕士在读
+    - 香港中文大学（深圳）计算机学士
+    - 后端与系统方向
+    - AI 产品工程
+  actions:
+    - label: 下载中文简历
+      url: /resume/youran-ma-resume-zh.pdf
+      style: primary
+    - label: 发送邮件
+      url: mailto:youranma2024@gmail.com
+      style: secondary
+    - label: GitHub
+      url: https://github.com/myr321
+      style: ghost
+  facts:
+    - label: 当前身份
+      value: Northwestern University 计算机科学硕士在读
+    - label: 最近经历
+      value: Avary.ai 软件工程实习生
+    - label: 关注方向
+      value: 后端架构, 产品流程实现, 高性能 C/C++ 与并行计算
+
+contacts:
+  - label: 电话
+    value: (+86)183-0619-9968
+  - label: 邮件
+    value: youranma2024@gmail.com
+    url: mailto:youranma2024@gmail.com
+  - label: GitHub
+    value: github.com/myr321
+    url: https://github.com/myr321
+
+experience:
+  - company: Avary.ai
+    role: 软件工程实习生
+    period: 2025.11 - 2026.02
+    location: 美国华盛顿州西雅图（远程）
+    bullets:
+      - 参与 AI 面试官产品迭代开发，协助与客户沟通完善需求，配合完成 PR 评审、联调与测试，按节奏交付前后端功能。
+      - 参与面试流程优化，在模拟环节补充录音时长与静音检测逻辑，完善提示与重试引导，减少误操作带来的无效录音。
+      - 参与开发面试语音系统，推动 GPT 先分句加服务端兜底的断句方案，按 8 至 25 词粒度输出 TTS 分块，并补充模拟回答测试，提升长回答场景下的流式输出平滑度。
+      - 参与构建数据整合面板，实现统计卡片、面试列表、Top 榜单及配套 API，支持分页查询、多条件筛选，并结合数据库索引与查询优化提升接口性能与页面响应速度。
+  - company: OSRAM Opto Semiconductors
+    role: 软件工程实习生
+    period: 2024.05 - 2024.08
+    location: 中国江苏无锡
+    bullets:
+      - 参与公司物料管理系统研发，将旧版 HTML 操作界面迁移至基于 Qt/C++ 的 PDA 应用，支持扫码录入、物料接收与库位流转等核心流程，提升产线作业便捷性。
+      - 对 C++ 请求和响应处理进行模块化封装，对接遗留 API，沉淀可复用交互组件，提升跨模块协作效率，加速系统迭代。
+      - 协助 Spring Boot 后端开发，补充业务逻辑、数据库访问与接口文档，配合前端联调并参与需求调研及流程梳理。
+      - 参与前端部署交接，配合完成后端阿里云环境的测试验证与上线准备，保障系统试运行与交付。
+
+projects:
+  - name: TFT Smart Hub
+    role: Tech Lead
+    period: 2025.09 - 2025.12
+    context: 合作项目
+    stack: Vue 3, Vite, Rails RESTful API, PostgreSQL, GitHub Actions, Heroku
+    links:
+      - label: 网站
+        url: https://tft-smarthub-517534671b49.herokuapp.com
+      - label: GitHub
+        url: https://github.com/NU-CS-Software-Studio-Fall-25/project-tft-smart-hub
+    bullets:
+      - 在四人 Scrum 团队中担任 Tech Lead，推进迭代规划、任务拆分与前后端协同开发。
+      - 设计数据模型与 Rails MVC 接口，参与后端开发，为阵容检索与浏览提供服务端筛选、分页和索引优化，缓解数据规模增长带来的查询压力与页面卡顿。
+      - 负责前端核心功能开发，实现阵容搜索、编辑与推荐等功能，并通过语义化标签、 ARIA 与键盘导航提升网站可访问性。
+      - 参与 GitHub Actions 的 CI/CD 流程建设，接入 RSpec 与 Cucumber 测试，完成 Heroku 部署并集成 Google OAuth 与 SMTP 邮件能力。
+  - name: CUDA 注意力前向计算
+    role: 个人项目
+    period: 2024.09 - 2025.01
+    context: 高性能计算
+    stack: C++, CUDA, Python, PyTorch C++ 扩展
+    links:
+      - label: GitHub
+        url: https://github.com/myr321/GPU-accelerated-Attention
+    bullets:
+      - 基于 PyTorch C++ 扩展与 CUDA 实现 Scaled Dot-Product Attention 前向计算，完成 naive、tiled 和 fused Softmax 加 P@V 三类自定义 kernel，并编写测试与绘图脚本，系统比较不同优化策略的性能收益。
+      - 针对注意力计算的两个阶段，引入 shared memory tiling 和 warp-level reduction 两类优化，并设计融合 Softmax 加 P@V 的 kernel，减少中间内存访问开销。
+      - 使用 Python 构建正确性校验与性能测试流程，在 RTX 2060 SUPER 环境下对多组输入完成 benchmark，最佳自定义实现相较 CPU baseline 取得约 3 倍加速。
+
+education:
+  - school: Northwestern University
+    school_detail: 美国伊利诺伊州埃文斯顿
+    degree: 计算机科学硕士
+    period: 2025.09 - 2026.12
+    location: GPA 3.9/4.0
+    note: Software Development Studio, Cryptography, CUDA Programming, Scalable Software Architectures
+    highlights:
+      - 硕士在读
+  - school: 香港中文大学（深圳）
+    school_detail: 中国广东深圳
+    degree: 计算机科学与工程学士
+    period: 2021.09 - 2025.06
+    location: GPA 3.6/4.0
+    note: 数据结构，算法分析与设计，计算机体系结构，计算机网络，操作系统，数据库系统，软件工程，并行计算等
+    highlights:
+      - 2022 Dean's List
+      - 2024 Dean's List
+      - 一等荣誉学士学位
+
+skills:
+  - title: 编程语言
+    items:
+      - Java
+      - C++
+      - Python
+      - JavaScript
+      - SQL
+  - title: 框架与技术
+    items:
+      - Spring Boot
+      - Vue 3
+      - Qt
+      - Rails
+      - Express
+  - title: 数据库与后端
+    items:
+      - MySQL
+      - 数据库建模
+      - 查询优化
+      - 服务端部署
+  - title: 工程能力
+    items:
+      - AWS EC2
+      - AWS Lambda
+      - Git
+      - 并行计算
+      - 性能优化
+
+additional:
+  - label: 英语能力
+    value: TOEFL 107, GRE 325

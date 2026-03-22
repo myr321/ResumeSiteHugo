@@ -1,0 +1,207 @@
+{{ define "main" }}
+{{ $resume := index .Site.Data.resume .Site.Language.Lang }}
+<div class="site-bg" aria-hidden="true"></div>
+<div class="page-shell">
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <span class="brand-mark"></span>
+      <span class="brand-text">{{ $resume.site.name }}</span>
+    </a>
+    <nav class="nav-links" aria-label="Section navigation">
+      {{ range $resume.nav }}
+        <a href="#{{ .anchor }}">{{ .label }}</a>
+      {{ end }}
+    </nav>
+    <div class="language-switcher" aria-label="Language switcher">
+      {{ range sort .AllTranslations "Language.Weight" }}
+        <a href="{{ .RelPermalink }}" class="{{ if eq .Language.Lang $.Site.Language.Lang }}is-active{{ end }}">{{ .Language.LanguageName }}</a>
+      {{ end }}
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy surface">
+        <p class="eyebrow">{{ $resume.hero.eyebrow }}</p>
+        <h1>{{ $resume.site.name }}</h1>
+        <p class="hero-role">{{ $resume.hero.role }}</p>
+        <p class="hero-summary">{{ $resume.hero.summary }}</p>
+
+        <div class="hero-actions">
+          {{ range $resume.hero.actions }}
+            <a class="button button-{{ .style }}" href="{{ .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noreferrer"{{ end }}>{{ .label }}</a>
+          {{ end }}
+        </div>
+
+        <ul class="badge-list" aria-label="Highlights">
+          {{ range $resume.hero.badges }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <aside class="hero-panel surface">
+        <div class="fact-list">
+          {{ range $resume.hero.facts }}
+            <div class="fact-item">
+              <p class="fact-label">{{ .label }}</p>
+              <p class="fact-value">{{ .value }}</p>
+            </div>
+          {{ end }}
+        </div>
+
+        <div class="contact-block">
+          <h2>{{ $resume.labels.contact }}</h2>
+          <ul class="contact-list">
+            {{ range $resume.contacts }}
+              <li>
+                <span class="contact-label">{{ .label }}</span>
+                {{ if .url }}
+                  <a href="{{ .url }}" {{ if hasPrefix .url "http" }}target="_blank" rel="noreferrer"{{ end }}>{{ .value }}</a>
+                {{ else }}
+                  <span class="contact-value">{{ .value }}</span>
+                {{ end }}
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <p class="section-kicker">01</p>
+        <h2>{{ $resume.labels.experience }}</h2>
+      </div>
+      <div class="timeline">
+        {{ range $resume.experience }}
+          <article class="entry-card surface">
+            <div class="entry-topline">
+              <div>
+                <h3>{{ .company }}</h3>
+                <p class="entry-role">{{ .role }}</p>
+              </div>
+              <div class="entry-meta">
+                <span>{{ .period }}</span>
+                <span>{{ .location }}</span>
+              </div>
+            </div>
+            <ul class="bullet-list">
+              {{ range .bullets }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="section-kicker">02</p>
+        <h2>{{ $resume.labels.projects }}</h2>
+      </div>
+      <div class="timeline">
+        {{ range $resume.projects }}
+          <article class="entry-card surface">
+            <div class="entry-topline">
+              <div>
+                <h3>{{ .name }}</h3>
+                <p class="entry-role">{{ .role }}{{ with .context }} - {{ . }}{{ end }}</p>
+              </div>
+              <div class="entry-meta">
+                <span>{{ .period }}</span>
+              </div>
+            </div>
+            {{ with .stack }}
+              <p class="stack-line"><span>{{ $resume.labels.stack }}</span> {{ . }}</p>
+            {{ end }}
+            {{ with .links }}
+              <div class="link-row">
+                {{ range . }}
+                  <a href="{{ .url }}" target="_blank" rel="noreferrer">{{ .label }}</a>
+                {{ end }}
+              </div>
+            {{ end }}
+            <ul class="bullet-list">
+              {{ range .bullets }}
+                <li>{{ . }}</li>
+              {{ end }}
+            </ul>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-heading">
+        <p class="section-kicker">03</p>
+        <h2>{{ $resume.labels.education }}</h2>
+      </div>
+      <div class="education-grid">
+        {{ range $resume.education }}
+          <article class="education-card surface">
+            <div class="education-top">
+              <div>
+                <h3>{{ .school }}</h3>
+                <p class="education-subtitle">{{ .school_detail }}</p>
+              </div>
+              <p class="education-period">{{ .period }}</p>
+            </div>
+            <p class="education-degree">{{ .degree }}</p>
+            <div class="education-meta">
+              <span>{{ .location }}</span>
+            </div>
+            {{ with .note }}
+              <p class="education-note"><span>{{ $resume.labels.coursework }}</span> {{ . }}</p>
+            {{ end }}
+            {{ with .highlights }}
+              <div class="tag-cloud">
+                {{ range . }}
+                  <span>{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="section-kicker">04</p>
+        <h2>{{ $resume.labels.skills }}</h2>
+      </div>
+      <div class="skills-grid">
+        {{ range $resume.skills }}
+          <article class="skill-card surface">
+            <h3>{{ .title }}</h3>
+            <div class="tag-cloud">
+              {{ range .items }}
+                <span>{{ . }}</span>
+              {{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+
+    {{ with $resume.additional }}
+      <section class="section section-compact" id="additional">
+        <div class="section-heading">
+          <p class="section-kicker">05</p>
+          <h2>{{ $resume.labels.additional }}</h2>
+        </div>
+        <div class="meta-grid">
+          {{ range . }}
+            <article class="meta-card surface">
+              <p class="meta-label">{{ .label }}</p>
+              <p class="meta-value">{{ .value }}</p>
+            </article>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </main>
+</div>
+{{ end }}
