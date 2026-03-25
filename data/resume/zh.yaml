@@ -25,26 +25,26 @@ labels:
 
 hero:
   eyebrow: 后端开发, 系统实现, AI 应用工程
-  role: Northwestern University 计算机科学硕士在读
-  summary: 具备 AI 招聘产品、企业内部系统与高性能计算项目经历，关注后端服务、系统实现与产品落地，能够在前后端协作中推进功能交付、性能优化与上线准备。
+  role: 西北大学（美国）计算机科学硕士在读
+  summary: 具备 AI 招聘产品、企业内部系统与高性能计算项目经历，关注后端服务、系统实现、云端部署与产品交付，能够在前后端协作中推进功能开发、性能优化与上线准备。
   badges:
-    - Northwestern University 硕士在读
-    - 香港中文大学（深圳）计算机学士
+    - 西北大学（美国）硕士在读
+    - 港中深计算机学士
     - 后端与系统方向
-    - AI 产品工程
+    - 云部署与 AI 产品工程
   actions:
     - label: 下载中文简历
       url: /resume/youran-ma-resume-zh.pdf
       style: primary
     - label: 发送邮件
-      url: mailto:youranma2024@gmail.com
+      url: mailto:youranma2004@gmail.com
       style: secondary
     - label: GitHub
       url: https://github.com/myr321
       style: ghost
   facts:
     - label: 当前身份
-      value: Northwestern University 计算机科学硕士在读
+      value: 西北大学（美国）计算机科学硕士在读
     - label: 最近经历
       value: Avary.ai 软件工程实习生
     - label: 关注方向
@@ -54,30 +54,30 @@ contacts:
   - label: 电话
     value: (+86)183-0619-9968
   - label: 邮件
-    value: youranma2024@gmail.com
-    url: mailto:youranma2024@gmail.com
+    value: youranma2004@gmail.com
+    url: mailto:youranma2004@gmail.com
   - label: GitHub
     value: github.com/myr321
     url: https://github.com/myr321
 
 experience:
-  - company: Avary.ai
+  - company: Avary.ai（AI 招聘 SaaS）
     role: 软件工程实习生
     period: 2025.11 - 2026.02
     location: 美国华盛顿州西雅图（远程）
     bullets:
       - 参与 AI 面试官产品迭代开发，协助与客户沟通完善需求，配合完成 PR 评审、联调与测试，按节奏交付前后端功能。
-      - 参与面试流程优化，在模拟环节补充录音时长与静音检测逻辑，完善提示与重试引导，减少误操作带来的无效录音。
-      - 参与开发面试语音系统，推动 GPT 先分句加服务端兜底的断句方案，按 8 至 25 词粒度输出 TTS 分块，并补充模拟回答测试，提升长回答场景下的流式输出平滑度。
-      - 参与构建数据整合面板，实现统计卡片、面试列表、Top 榜单及配套 API，支持分页查询、多条件筛选，并结合数据库索引与查询优化提升接口性能与页面响应速度。
-  - company: OSRAM Opto Semiconductors
+      - 负责面试流程优化，在模拟环节补充录音时长与静音检测逻辑，完善提示与重试引导，减少误操作带来的无效录音。
+      - 完善面试语音系统，推动 GPT 先分句加服务端兜底的断句切分方案，按 8 至 25 词粒度输出 TTS 分块，并补充 10 组模拟回答测试，支持首句就绪后优先播报，提升长回答场景下的流式输出平滑度。
+      - 负责构建数据整合面板，实现统计卡片、面试列表、热门榜单及配套 API，支持面试记录分页查询、多条件筛选，并结合数据库索引与查询优化提升统计接口性能，减少全量数据加载带来的传输与渲染开销，提升页面响应速度和用户体验。
+  - company: 欧司朗（OSRAM）
     role: 软件工程实习生
     period: 2024.05 - 2024.08
     location: 中国江苏无锡
     bullets:
-      - 参与公司物料管理系统研发，将旧版 HTML 操作界面迁移至基于 Qt/C++ 的 PDA 应用，支持扫码录入、物料接收与库位流转等核心流程，提升产线作业便捷性。
+      - 参与公司物料管理系统研发，将旧版 Web 操作界面迁移至基于 Qt/C++ 的 PDA 应用，支持扫码录入、物料接收与库位流转等核心流程，提升产线作业便捷性。
       - 对 C++ 请求和响应处理进行模块化封装，对接遗留 API，沉淀可复用交互组件，提升跨模块协作效率，加速系统迭代。
-      - 协助 Spring Boot 后端开发，补充业务逻辑、数据库访问与接口文档，配合前端联调并参与需求调研及流程梳理。
+      - 协助 Spring Boot 后端开发，补充业务逻辑、数据库访问与接口文档，配合前端联调并负责功能说明；多次参与需求调研，并与生产部门协作梳理流程细节，支持功能迭代落地。
       - 参与前端部署交接，配合完成后端阿里云环境的测试验证与上线准备，保障系统试运行与交付。
 
 projects:
@@ -87,12 +87,10 @@ projects:
     context: 合作项目
     stack: Vue 3, Vite, Rails RESTful API, PostgreSQL, GitHub Actions, Heroku
     links:
-      - label: 网站
-        url: https://tft-smarthub-517534671b49.herokuapp.com
       - label: GitHub
         url: https://github.com/NU-CS-Software-Studio-Fall-25/project-tft-smart-hub
     bullets:
-      - 在四人 Scrum 团队中担任 Tech Lead，推进迭代规划、任务拆分与前后端协同开发。
+      - 在 4 人 Scrum 团队中担任 Tech Lead，基于 Vue 3、Rails RESTful API 和 PostgreSQL 开发云顶之弈阵容管理与推荐平台。
       - 设计数据模型与 Rails MVC 接口，参与后端开发，为阵容检索与浏览提供服务端筛选、分页和索引优化，缓解数据规模增长带来的查询压力与页面卡顿。
       - 负责前端核心功能开发，实现阵容搜索、编辑与推荐等功能，并通过语义化标签、 ARIA 与键盘导航提升网站可访问性。
       - 参与 GitHub Actions 的 CI/CD 流程建设，接入 RSpec 与 Cucumber 测试，完成 Heroku 部署并集成 Google OAuth 与 SMTP 邮件能力。
@@ -100,7 +98,7 @@ projects:
     role: 个人项目
     period: 2024.09 - 2025.01
     context: 高性能计算
-    stack: C++, CUDA, Python, PyTorch C++ 扩展
+    stack: C++, CUDA, Python
     links:
       - label: GitHub
         url: https://github.com/myr321/GPU-accelerated-Attention
@@ -110,12 +108,12 @@ projects:
       - 使用 Python 构建正确性校验与性能测试流程，在 RTX 2060 SUPER 环境下对多组输入完成 benchmark，最佳自定义实现相较 CPU baseline 取得约 3 倍加速。
 
 education:
-  - school: Northwestern University
+  - school: 西北大学（美国）
     school_detail: 美国伊利诺伊州埃文斯顿
     degree: 计算机科学硕士
     period: 2025.09 - 2026.12
     location: GPA 3.9/4.0
-    note: Software Development Studio, Cryptography, CUDA Programming, Scalable Software Architectures
+    note: 软件开发实践，密码学，机器学习，CUDA 编程，云计算等
     highlights:
       - 硕士在读
   - school: 香港中文大学（深圳）
@@ -132,31 +130,47 @@ education:
 skills:
   - title: 编程语言
     items:
-      - Java
+      - C
       - C++
+      - Java
       - Python
-      - JavaScript
       - SQL
-  - title: 框架与技术
+  - title: 框架
     items:
       - Spring Boot
       - Vue 3
       - Qt
       - Rails
-      - Express
-  - title: 数据库与后端
+  - title: 数据库
     items:
       - MySQL
-      - 数据库建模
+      - PostgreSQL
+      - SQLite
+      - 数据库设计
       - 查询优化
-      - 服务端部署
-  - title: 工程能力
+      - 部署实践
+  - title: 云服务
     items:
+      - AWS S3
       - AWS EC2
       - AWS Lambda
-      - Git
+      - AWS SQS
+      - Heroku
+      - GitHub Actions
+      - CI/CD 配置
+  - title: 并行与系统
+    items:
+      - CUDA
+      - OpenMP
+      - MPI
       - 并行计算
       - 性能优化
+  - title: 工程能力
+    items:
+      - Git
+      - Linux 开发环境
+      - 测试与调试
+      - 算法与数据结构
 
 additional:
   - label: 英语能力

@@ -116,7 +116,7 @@ education:
     degree: Master of Science in Computer Science
     period: Sep 2025 - Dec 2026
     location: Evanston, Illinois, USA
-    note: GPA 3.9/4.0
+    note: GPA 3.95/4.0
     highlights:
       - Software Development Studio
       - Cryptography
@@ -132,6 +132,7 @@ education:
       - Dean's List
       - Data Structures
       - Design and Analysis of Algorithms
+      - Computer Architecture
       - Operating Systems
       - Database Systems
       - Parallel Computing
